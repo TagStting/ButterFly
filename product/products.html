@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>订单查询</title>
+<style type="text/css">
+*
+{
+	margin:0px;
+	padding:0px;
+}
+#top
+{
+	position:absolute;
+	width:100%;
+	min-width:1300px;
+	height:140px;
+	box-shadow:0 2px 5px gray;
+}
+#logo
+{
+	position:absolute;
+	width:170px;
+	height:130px;
+	top:7px;
+	left:120px;
+}
+#main
+{
+	position:absolute;
+	width:1000px;
+	height:880px;
+	top:160px;
+	left:165px;
+	box-shadow:2px -3px 5px gray;
+	background-color:#D9D9D9;
+}
+#title_list
+{
+	position:absolute;
+	top:8px;
+}
+#title_list li
+{
+	display:block;
+	width:100px;
+	height:15px;
+	font-family:黑体;
+	font-size:19px;
+	font-weight:700;
+	text-align:center;
+	line-height:15px;
+	float:left;
+	cursor:pointer;
+	border-right:1px solid #898989;
+}
+#title_list li:last-child
+{
+	border-right:1px solid #D9D9D9;
+}
+#title_list li:hover
+{
+	color:#F03;
+}
+#uls
+{
+	position:absolute;
+	width:900px;
+	height:30px;
+	top:30px;
+	left:50px;
+	border-bottom:2px solid #7A7A7A;
+}
+#txt_search
+{
+	position:absolute;
+	width:200px;
+	height:25px;
+	top:80px;
+	left:50px;
+	font-size:14px;
+	line-height:25px;
+	padding-left:15px;
+}
+#btn_search
+{
+	position:absolute;
+	width:80px;
+	height:29px;
+	top:80px;
+	left:266px;
+	text-align:center;
+	line-height:29px;
+	color:#FFF;
+	cursor:pointer;
+	background-color:#F03;
+}
+#btn_search:hover
+{
+	box-shadow:0 0 5px #F03;
+}
+#all_product
+{
+	position:absolute;
+	width:900px;
+	height:750px;
+	top:130px;
+	left:50px;
+}
+#product_1
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:900px;
+	height:200px;
+	border:1px solid #969696;
+}
+#product_2
+{
+	position:absolute;
+	top:360px;
+	left:50px;
+	width:900px;
+	height:200px;
+	border:1px solid #969696;
+}
+#product_3
+{
+	position:absolute;
+	top:750px;
+	left:215px;
+	width:900px;
+	height:200px;
+	border:1px solid #969696;
+}
+.product_top
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:40px;
+	background-color:#B2B2B2;
+}
+.product_top span
+{
+	font-family:黑体;
+	font-size:15px;
+	line-height:40px;
+	margin-left:30px;
+}
+.product_name
+{
+	position:absolute;
+	width:300px;
+	height:140px;
+	top:40px;
+	padding-top:20px;
+	border:1px solid #969696;
+}
+.product_name img
+{
+	margin-left:30px;
+	float:left;
+}
+.product_name span
+{
+	font-family:黑体;
+	font-size:14px;
+	line-height:30px;
+}
+.product_price
+{
+	position:absolute;
+	width:100px;
+	height:140px;
+	top:40px;
+	left:300px;
+	padding-top:20px;
+	border:1px solid #969696;
+}
+.product_price del
+{
+	margin-left:30px;
+	color:gray;
+}
+.product_price span
+{
+	font-size:19px;
+	margin-left:30px;
+	color:black;
+}
+.product_num
+{
+	position:absolute;
+	width:70px;
+	height:130px;
+	top:40px;
+	left:400px;
+	padding-top:30px;
+	border:1px solid #969696;
+}
+.product_num span
+{
+	font-size:19px;
+	margin-left:30px;
+	color:black;
+}
+.product_control
+{
+	position:absolute;
+	width:80px;
+	height:140px;
+	top:40px;
+	left:470px;
+	padding-top:20px;
+	border:1px solid #969696;
+}
+.product_control a
+{
+	font-size:14px;
+	color:#000;
+	text-decoration:none;
+	line-height:30px;
+	margin-left:13px;
+}
+.product_control a:hover
+{
+	color:#F03;
+}
+.product_true_price
+{
+	position:absolute;
+	width:100px;
+	height:140px;
+	top:40px;
+	left:550px;
+	padding-top:20px;
+	border:1px solid #969696;
+}
+.product_true_price span
+{
+	font-size:19px;
+	margin-left:30px;
+	color:#F03;
+}
+.product_state
+{
+	position:absolute;
+	width:80px;
+	height:140px;
+	top:40px;
+	left:650px;
+	padding-top:20px;
+	border:1px solid #969696;
+}
+.product_state a
+{
+	font-size:14px;
+	color:#000;
+	text-decoration:none;
+	line-height:30px;
+	margin-left:13px;
+}
+.product_state a:hover
+{
+	color:#F03;
+}
+.product_command
+{
+	position:absolute;
+	width:80px;
+	height:140px;
+	top:40px;
+	left:730px;
+	padding-top:20px;
+	border:1px solid #969696;
+}
+.product_command div
+{
+	width:50px;
+	height:25px;
+	text-align:center;
+	line-height:25px;
+	background-color:#FFF;
+	color:#000;
+	cursor:pointer;
+	margin-left:15px;
+	border-radius:3px;
+}
+</style>
+</head>
+
+<body>
+<div id="top">
+<img src="../logo.png" width="200px" height="200px" id="logo"/>
+</div>
+<div id="main">
+<div id="uls">
+<ul style="list-style-type:none;" id="title_list">
+  <li>所有订单</li>
+  <li>待发货</li>
+  <li>待收货</li>
+  <li>待付款</li>
+  <li>待评价</li>
+</ul>
+</div>
+<input type="text" placeholder="输入订单号或商品号查询" id="txt_search" />
+<div id="btn_search">订单查询</div>
+
+<div id="all_product">
+<div id="product_1">
+<div class="product_top"><span>2017-10-23</span><span>订单号：230201032030</span></div>
+<div class="product_name">
+<img src="products_img/product_1.jpg" width="100px" height="100px" />
+<span>【双11狂欢前夜】中国御泥坊葡萄籽琉璃亮黑面膜21片</span>
+</div>
+
+<div class="product_price">
+<del>￥270</del><br />
+<span>￥150</span>
+</div>
+
+<div class="product_num">
+<span>1</span>
+</div>
+
+<div class="product_control">
+<a href="#">申请售后</a>
+<a href="#">投诉商家</a>
+</div>
+
+<div class="product_true_price">
+<span>￥150</span>
+</div>
+
+<div class="product_state">
+<a href="#">交易成功</a>
+<a href="#">订单详情</a>
+<a href="#">查看物流</a>
+</div>
+
+<div class="product_command">
+<div>评价</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+<div id="product_2">
+<div class="product_top"><span>2017-10-05</span><span>订单号：2302980432030</span></div>
+<div class="product_name">
+<img src="products_img/product_2.jpg" width="100px" height="100px" />
+<span>御泥坊水润柔嫩黑膜套装28片（清爽7片+牛油果7片+黑珍珠7片+黑糖7片）</span>
+</div>
+
+<div class="product_price">
+<del>￥560</del><br />
+<span>￥380</span>
+</div>
+
+<div class="product_num">
+<span>2</span>
+</div>
+
+<div class="product_control">
+<a href="#">申请售后</a>
+<a href="#">投诉商家</a>
+</div>
+
+<div class="product_true_price">
+<span>￥760</span>
+</div>
+
+<div class="product_state">
+<a href="#">交易成功</a>
+<a href="#">订单详情</a>
+<a href="#">查看物流</a>
+</div>
+
+<div class="product_command">
+<div>评价</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+<div id="product_3">
+<div class="product_top"><span>2017-09-15</span><span>订单号：9023946034861</span></div>
+<div class="product_name">
+<img src="products_img/product_3.jpg" width="100px" height="100px" />
+<span>中国•梵柏莎璀璨迷幻唇膏 3.8g </span>
+</div>
+
+<div class="product_price">
+<del>￥200</del><br />
+<span>￥190</span>
+</div>
+
+<div class="product_num">
+<span>1</span>
+</div>
+
+<div class="product_control">
+<a href="#">申请售后</a>
+<a href="#">投诉商家</a>
+</div>
+
+<div class="product_true_price">
+<span>￥190</span>
+</div>
+
+<div class="product_state">
+<a href="#">交易成功</a>
+<a href="#">订单详情</a>
+<a href="#">查看物流</a>
+</div>
+
+<div class="product_command">
+<div>评价</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+</div>
+</body>
+</html>

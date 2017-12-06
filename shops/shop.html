@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>购物车</title>
+<style type="text/css">
+*
+{
+	margin:0px;
+	padding:0px;
+}
+#top
+{
+	position:absolute;
+	width:100%;
+	height:140px;
+	border-bottom:3px solid #B6B6B6;
+}
+#logo
+{
+	position:absolute;
+	width:170px;
+	height:130px;
+	top:7px;
+	left:120px;
+}
+#mid
+{
+	position:absolute;
+	width:1000px;
+	height:400px;
+	top:200px;
+	left:170px;
+}
+#shop_img
+{
+	position:absolute;
+	top:20px;
+	left:100px;
+}
+#mid_title
+{
+	position:absolute;
+	font-family:黑体;
+	font-size:25px;
+	font-weight:600;
+	top:30px;
+	left:250px;
+	color:#ACACAC;
+}
+#mid_title_mid
+{
+	position:absolute;
+	font-family:黑体;
+	font-size:14px;
+	top:70px;
+	left:250px;
+	color:#8D8D8D;
+}
+#mid_title_mid span a
+{
+	display:inline-block;
+	width:80px;
+	height:30px;
+	text-decoration:none;
+	text-align:center;
+	line-height:30px;
+	color:#FFF;
+	border-radius:3px;
+	background-color:#F03;
+}
+#txt_search
+{
+	position:absolute;
+	width:300px;
+	height:30px;
+	top:120px;
+	left:250px;
+	font-size:15px;
+	line-height:30px;
+	padding-left:20px;
+}
+#btn_search
+{
+	position:absolute;
+	width:60px;
+	height:32px;
+	text-align:center;
+	line-height:32px;
+	top:120px;
+	left:571px;
+	color:#FFF;
+	background-color:#F03;
+	cursor:pointer;
+}
+#btn_search:hover
+{
+	box-shadow:0 0 5px #F03;
+}
+</style>
+</head>
+
+<body>
+<div id="top">
+<img src="../logo.png" width="200px" height="200px" id="logo"/>
+</div>
+
+<div id="mid">
+<img src="shops_img/shop_img.png" width="100px" height="100px" id="shop_img" />
+<p id="mid_title">购物车空空如也，快去挑选心爱的商品吧</p>
+<p id="mid_title_mid">您可以<span><a href="#">返回商城</a></span>挑选商品，或者</p>
+<input type="text" placeholder="搜索您想要的商品" id="txt_search" />
+<div id="btn_search">搜索</div>
+</div>
+
+</body>
+</html>

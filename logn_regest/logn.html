@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登陆ButterFly</title>
+
+<script type="text/javascript">
+var o1 ;
+var o2 ;
+onload = function()
+{
+	o1 = document.getElementById("logn");
+	o2 = document.getElementById("regest");
+	o2.style.display = "none";
+	o1.style.display = "block";
+}
+function over()
+{
+	o1 = document.getElementById("logn");
+	o2 = document.getElementById("regest");
+	o2.style.display = "none";
+	o1.style.display = "block";
+}
+function out()
+{
+	o1 = document.getElementById("logn");
+	o2 = document.getElementById("regest");
+	o1.style.display = "none";
+	o2.style.display = "block";
+}
+</script>
+
+<style type="text/css">
+*
+{
+	margin:0px;
+	padding:0px;
+}
+
+#logo
+{
+	position:absolute;
+	width:200px;
+	height:160px;
+	top:7px;
+	left:80px;
+}
+#logn_img
+{
+	position:absolute;
+	top:170px;
+}
+#logn
+{
+	position:absolute;
+	width:300px;
+	height:400px;
+	top:130px;
+	left:1000px;
+	padding-left:20px;
+	padding-right:20px;
+	background-color:#FFF;
+	box-shadow:0 0 5px gray;
+	transition:all 0.5s;
+}
+#logn h1,#regest h1
+{
+	font-size:20px;
+	color:#F03;
+	line-height:50px;
+}
+#logn h1 span,#regest h1 span
+{
+	font-size:12px;
+	color:gray;
+	line-height:50px;
+	float:right;
+}
+#logn h1 span a,#regest h1 span a
+{
+	color:#F03;
+	text-decoration:none;
+	margin-left:10px;
+}
+#logn_txt
+{
+	position:absolute;
+	top:120px;
+	left:20px;
+	width:250px;
+	height:30px;
+	font-size:18px;
+	line-height:30px;
+	padding-left:20px;
+}
+#logn_pos
+{
+	position:absolute;
+	top:170px;
+	left:20px;
+	width:250px;
+	height:30px;
+	font-size:18px;
+	line-height:30px;
+	padding-left:20px;
+}
+#logn_txt:hover,#logn_pos:hover
+{
+	box-shadow:0 0 5px #F03;
+}
+#zo_logn
+{
+	position:absolute;
+	top:230px;
+	left:20px;
+}
+#zo_logn_txt
+{
+	position:absolute;
+	top:230px;
+	left:40px;
+	font-size:14px;
+}
+#forgat_pos
+{
+	position:absolute;
+	top:230px;
+	left:230px;
+	color:#000;
+	text-decoration:none;
+	font-size:14px;
+}
+#forgat_pos:hover
+{
+	color:#F03;
+}
+#btn_logn
+{
+	position:absolute;
+	width:250px;
+	height:30px;
+	top:280px;
+	left:30px;
+	text-align:center;
+	line-height:30px;
+	font-family:黑体;
+	font-weight:700;
+	color:#FFF;
+	background-color:#F03;
+	cursor:pointer;
+}
+#btn_logn:hover
+{
+	box-shadow:0 0 8px #F03;
+}
+#regest
+{
+	position:absolute;
+	width:300px;
+	height:400px;
+	top:130px;
+	left:1000px;
+	padding-left:20px;
+	padding-right:20px;
+	background-color:#FFF;
+	box-shadow:0 0 5px gray;
+	transition:all 0.5s;
+}
+#regest_phone
+{
+	position:absolute;
+	top:70px;
+	left:20px;
+	width:250px;
+	height:30px;
+	font-size:18px;
+	line-height:30px;
+	padding-left:20px;
+}
+#regest_crc
+{
+	position:absolute;
+	top:130px;
+	left:20px;
+	width:110px;
+	height:30px;
+	font-size:18px;
+	line-height:30px;
+	padding-left:20px;
+}
+#btn_get_crc
+{
+	position:absolute;
+	top:130px;
+	left:180px;
+	width:110px;
+	height:33px;
+	font-size:18px;
+	line-height:33px;
+	text-align:center;
+	background-color:#C8C8C8;
+	cursor:pointer;
+}
+#regest_pos
+{
+	position:absolute;
+	top:190px;
+	left:20px;
+	width:250px;
+	height:30px;
+	font-size:18px;
+	line-height:30px;
+	padding-left:20px;
+}
+#regest_re_pos
+{
+	position:absolute;
+	top:250px;
+	left:20px;
+	width:250px;
+	height:30px;
+	font-size:18px;
+	line-height:30px;
+	padding-left:20px;
+}
+#btn_regest
+{
+	position:absolute;
+	width:250px;
+	height:30px;
+	top:310px;
+	left:30px;
+	text-align:center;
+	line-height:30px;
+	font-family:黑体;
+	font-weight:700;
+	color:#FFF;
+	background-color:#F03;
+	cursor:pointer;
+}
+#btn_regest:hover
+{
+	box-shadow:0 0 8px #F03;
+}
+</style>
+
+</head>
+
+<body>
+<img src="../logo.png" width="200px" height="200px" id="logo"/>
+<img src="logn_regest_img/img.jpg" id="logn_img" height="330px" width="100%;" />
+
+<div id="logn">
+<h1><strong>登陆ButterFly</strong><span>还没有账号?<a href="javascript:out()">注册</a></span></h1>
+<input type="radio" checked="checked" style="margin-top:30px;" />普通登陆<input type="radio" style=" margin-left:20px; margin-top:30px;" />手机验证登陆
+<input type="text" placeholder="输入手机号/邮箱/用户名" id="logn_txt" />
+<input type="password" placeholder="输入密码" id="logn_pos" />
+<input type="checkbox" checked="checked" id="zo_logn" /><p id="zo_logn_txt">自动登陆</p>
+<a href="#" id="forgat_pos">忘记密码?</a>
+
+<div id="btn_logn">登陆</div>
+
+</div>
+
+
+<div id="regest">
+<h1><strong>用户注册</strong><span>已有帐号？<a href="javascript:over()">登陆</a></span></h1>
+<input type="text" placeholder="输入手机号" id="regest_phone" />
+<input type="text" placeholder="验证码" id="regest_crc" />
+<div id="btn_get_crc">获取验证码</div>
+<input type="text" placeholder="密码" id="regest_pos" />
+<input type="text" placeholder="确认密码" id="regest_re_pos" />
+<div id="btn_regest">注册</div>
+</div>
+
+
+</body>
+</html>
