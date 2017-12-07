@@ -10,13 +10,50 @@
 
 
 <script type="text/javascript">
-onload=function times()
+onload=function()
 {
+	var t=setTimeout('times()',1000);
 	index_img_change();
+}
+function times()
+{
 	var o1=document.getElementById("hours");
 	var o2=document.getElementById("minutes");
 	var o3=document.getElementById("secondes");
-	var t;
+	var sec,mins,hor;
+	if(parseInt(o3.innerHTML)!=0)
+	{
+	    sec=parseInt(o3.innerHTML)-1;
+		mins=parseInt(o2.innerHTML);
+		hor=parseInt(o1.innerHTML);
+	}
+		else
+		{
+			sec=59;
+			if(parseInt(o2.innerHTML)!=0)
+			{
+			   mins=parseInt(o2.innerHTML)-1;
+			   hor=parseInt(o1.innerHTML);
+			}
+			   else
+			   {
+				   mins=59;
+				   hor=parseInt(o1.innerHTML)-1;
+			   }
+		}
+		o1.innerHTML=change_times(hor);
+		o2.innerHTML=change_times(mins);
+		o3.innerHTML=change_times(sec);
+	var t=setTimeout('times()',1000);
+}
+function change_times(o)
+{
+	if(o>=0&&o<=9)
+	{
+		var o1="0"+o.toString();
+		return o1;
+	}
+	return o;
 }
 
 var img_index=1;              //全局变量，代表主页上图片切换中当前图片序号
@@ -1357,7 +1394,7 @@ li a
 <li><a href="#">欢迎您！</a></li>
 <li><a href="logn_regest/logn.html">请登录</a></li>
 <li><a href="logn_regest/logn.html" style="margin-right:650px">快速注册</a></li>
-<li><a href="#">个人中心</a></li>
+<li><a href="logn_regest/logn.html">个人中心</a></li>
 <li><a href="shops/shop.html">购物车</a></li>
 <li><a href="product/products.html">我的订单</a></li>
 <li><a href="#">我的收藏</a></li>
@@ -1377,7 +1414,7 @@ li a
 <li style="border-right:0px solid gray"><a href="#">保湿</a></li>
 </ul>
 <a id="packge" href="shops/shop.html">
-<img src="shopping-cart.png" width="50px" height="50px"/>
+<img src="other_imgs/shopping-cart.png" width="50px" height="50px"/>
 <p>去购物车结算</p>
 </a>
 </div>
@@ -1429,7 +1466,7 @@ li a
 </div>
 
 <div id="logns">
-<img src="170-butterfly.png" style="margin-top:40px; margin-left:5px;"/>
+<img src="other_imgs/170-butterfly.png" style="margin-top:40px; margin-left:5px;"/>
 <pre style="font-size:13px; position:absolute; top:25px; left:40px; color:#333;">
       Hi!
 欢迎来到ButterFly</pre>
@@ -1478,7 +1515,7 @@ li a
 </div>
 
 <div id="recommend" style="position:absolute; width:165px; height:220px; top:470px; left:84%; border-top:1px solid gray;">
-<img src="shop.jpg" width="164px" height="135px;" style="margin-top:10px;" />
+<img src="other_imgs/shop.jpg" width="164px" height="135px;" style="margin-top:10px;" />
 <p>防伪标识</p>
 <a href="#" style="text-decoration:none; color:black; font-size:14px; margin-left:16%;">欧莱雅官方旗舰店</a>
 <a href="#" id="add">加入关注</a>
@@ -1518,7 +1555,7 @@ li a
 
 <div id="hot">
 <div id="hot_top">
-<img src="alarm.png" width="50px" height="50px;" style=" margin-left:100px; margin-top:10px; float:left;"/>
+<img src="other_imgs/alarm.png" width="50px" height="50px;" style=" margin-left:100px; margin-top:10px; float:left;"/>
 <p><span style="font-size:26px;">ButterFly</span>&nbsp;&nbsp;&nbsp;限时秒杀 --></p>
 <p style="font-size:14px; line-height:70px; margin-left:25%;">当前场次 <span class="hot_time" id="hours">01</span>小时<span class="hot_time" id="minutes">28</span>分<span class="hot_time" id="secondes">09</span>秒 后结束抢购</p>
 </div>
@@ -1718,7 +1755,7 @@ li a
 
 </div>
 
-<img id="tomarro_top_img" src="bottom.jpg" />
+<img id="tomarro_top_img" src="other_imgs/bottom.jpg" />
 
 <div id="tomarro">
 <div id="tomarro_left">
@@ -1845,7 +1882,6 @@ li a
   <li><div class="containner"><img src="kown_img/img9.jpg" width="100px" height="50px" /><p>梦妆</p></div></li>
 </ul>
 </div>
-
 
 
 
